@@ -1,0 +1,27 @@
+{
+  "name": "preco-componente-com-mestre-de-alternancia",
+  "version": "1.0.0",
+  "description": "Carde de planos",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonibs/preco-componente-com-mestre-de-alternancia.git"
+  },
+  "author": "Anthoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonibs/preco-componente-com-mestre-de-alternancia/issues"
+  },
+  "homepage": "https://github.com/anthonibs/preco-componente-com-mestre-de-alternancia#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "4.0.0",
+    "gulp-sass": "5.0.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}

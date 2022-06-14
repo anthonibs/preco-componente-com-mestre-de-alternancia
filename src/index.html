@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+ 
+
+  <title>Escolha seu Plano</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <header class="header">
+      <h1 class="header__title">Nossos preços</h1>
+      
+      <div class="header__container">
+        <span class="header__subtitle-plan">Anualmente</span>
+        
+        <div class="header__switch">
+          <div class="header__switch-container">
+            <input id="switch" type="checkbox">
+            <label for="switch"></label>
+          </div>
+        </div>
+
+        <span class="header__subtitle-plan">Por mês</span>
+      </div>
+      
+    </header>
+
+
+    <main class="plan">
+      <div class="plan__container">
+        <section class="plan__card" id="basic">
+          <h2 class="plan__title">Básico</h2>
+          <div class="plan__value-wap">
+            <span class="plan__simbol">R$</span>
+            <p class="plan__value">199,99</p>
+          </div>
+          <ul class="plan__list">
+            <li class="plan__item">Armazenamento de 500 GB</li>
+            <li class="plan__item">2 usuários permitidos</li>
+            <li class="plan__item">Envie até 3 GB</li>
+          </ul>
+          <button class="btn__learn-more">Saber mais</button>
+        </section>
+
+        <section class="plan__card" id="professional">
+          <h2 class="plan__title plan__title--modify">Profissional</h2>
+          <div class="plan__value-wap plan__value--modify">
+            <span class="plan__simbol">R$</span>
+            <p class="plan__value">249,99</p>
+          </div>
+          <ul class="plan__list">
+            <li class="plan__item">Armazenamento de 1 TB</li>
+            <li class="plan__item">5 usuários permitidos</li>
+            <li class="plan__item">Envie até 10 GB</li>
+          </ul>
+          <button class="btn__learn-more btn__learn-more--modify">Saber mais</button>
+        </section>
+
+        <section class="plan__card" id="master">
+          <h2 class="plan__title">Master</h2>
+          <div class="plan__value-wap">
+            <span class="plan__simbol">R$</span>
+            <p class="plan__value">399,99</p>
+          </div>
+          <ul class="plan__list">
+            <li class="plan__item">Armazenamento de 2 TB</li>
+            <li class="plan__item">10 usuários permitidos</li>
+            <li class="plan__item">Envie até 20 GB</li>
+          </ul>
+          <button class="btn__learn-more">Saber mais</button>
+        </section>
+      </div>
+    </main>
+
+  </section>
+
+
+
+
+
+  <footer class="attribution">
+    Desafio por <a href="https://www.frontendmentor.io/profile/anthonibs" target="_blank">Frontend Mentor</a>.
+    Codificado por <a href="https://github.com/anthonibs/preco-componente-com-mestre-de-alternancia"
+      target="_blank">Anthoni</a>.
+  </footer>
+</body>
+
+</html>
