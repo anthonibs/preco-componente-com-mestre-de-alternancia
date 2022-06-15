@@ -1,147 +1,194 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
 .container {
-  padding: 2rem;
+  padding: 1rem;
 }
 
-.header__title {
-  font-size: 2rem;
-  color: hsl(233deg, 13%, 49%);
-  text-align: center;
+@media (min-width: 375px) {
+  .header__title {
+    font-size: 1.5rem;
+    color: hsl(233deg, 13%, 49%);
+    text-align: center;
+  }
+  .header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .header__container .header__subtitle-plan {
+    color: hsl(233deg, 13%, 49%);
+  }
+  .header .header__switch-container {
+    width: 5rem;
+  }
+  .header__switch-container input {
+    display: none;
+  }
+  .header__switch-container label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #a3a6f0;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3rem;
+  }
+  .header__switch-container label::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: hsl(240deg, 78%, 98%);
+    transition: all 0.4s ease;
+  }
+  .header__switch-container label::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(74deg, #a3a6f0 12%, #6b6bdb 80%);
+    opacity: 0.45;
+    transition: all 0.4s ease;
+  }
+  .header__switch-container input:checked ~ label::before {
+    opacity: 1;
+  }
+  .header__switch-container input:checked ~ label::after {
+    left: 57%;
+    background: hsl(240deg, 78%, 98%);
+  }
 }
-.header__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin: 3rem 0;
+@media (min-width: 960px) {
+  .header__title {
+    font-size: 2rem;
+  }
+  .header__container {
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
 }
-.header__container .header__subtitle-plan {
-  color: hsl(233deg, 13%, 49%);
+@media (min-width: 375px) {
+  .plan__container {
+    display: grid;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: minmax(250px, 360px);
+    gap: 1.5rem;
+    margin-top: 5rem;
+  }
+  .plan .plan__card {
+    border-radius: 0.5rem;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.1);
+  }
+  .plan .plan__card:nth-child(2) {
+    background: linear-gradient(74deg, #a3a6f0 12%, #6b6bdb 80%);
+    color: white;
+  }
+  .plan .plan__card .plan__title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(233deg, 13%, 49%);
+    padding: 1.2rem;
+  }
+  .plan .plan__card .plan__title--modify {
+    color: white;
+  }
+  .plan .plan__card .plan__value-wap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(233deg, 13%, 49%);
+    gap: 0.325rem;
+  }
+  .plan .plan__card .plan__value-wap .plan__simbol {
+    font-size: 1rem;
+  }
+  .plan .plan__card .plan__value-wap .plan__value {
+    font-size: 2rem;
+  }
+  .plan .plan__card .plan__value--modify {
+    color: white;
+  }
+  .plan .plan__card .plan__list {
+    margin-top: 1.5rem;
+  }
+  .plan .plan__card .plan__list .plan__item {
+    padding: 0.5rem 0;
+    text-align: center;
+    border-bottom: 1px solid hsl(234deg, 14%, 74%);
+  }
+  .plan .plan__card .plan__list .plan__item:first-child {
+    border-top: 1px solid hsl(234deg, 14%, 74%);
+  }
+  .plan .plan__card .btn__learn-more {
+    margin-top: 1rem;
+    background: transparent;
+    width: 100%;
+    padding: 0.325rem 0;
+    border-radius: 0.3rem;
+    border: 1px solid hsl(233deg, 13%, 49%);
+    color: hsl(233deg, 13%, 49%);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .plan .plan__card .btn__learn-more--modify {
+    color: white;
+    border: 1px solid white;
+  }
 }
-.header .header__switch-container {
-  width: 5rem;
+@media (min-width: 960px) {
+  .plan__container {
+    display: grid;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, minmax(250px, 320px));
+    gap: 1rem;
+    margin-top: 5rem;
+  }
+  .plan .plan__card {
+    border-radius: 0.5rem;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.1);
+  }
+  .plan .plan__card:nth-child(2) {
+    background: linear-gradient(74deg, #a3a6f0 12%, #6b6bdb 80%);
+    color: white;
+    transform: scale(1.15);
+  }
 }
-.header .header__switch-container input {
-  display: none;
+@media (min-width: 375px) {
+  .attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .attribution a {
+    color: hsl(234deg, 14%, 74%);
+    font-weight: 700;
+  }
+  .attribution a:hover {
+    color: hsl(233deg, 13%, 49%);
+  }
 }
-.header .header__switch-container label {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 2.5rem;
-  background-color: #a3a6f0;
-  position: relative;
-  cursor: pointer;
-  border-radius: 3rem;
+@media (min-width: 960px) {
+  .attribution {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
 }
-.header .header__switch-container label::after {
-  content: "";
-  position: absolute;
-  left: 0.4rem;
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  background: hsl(240deg, 78%, 98%);
-  transition: all 0.4s ease;
-}
-.header .header__switch-container label::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(74deg, #a3a6f0 12%, #6b6bdb 80%);
-  opacity: 0.45;
-  transition: all 0.4s ease;
-}
-.header .header__switch-container input:checked ~ label::before {
-  opacity: 1;
-}
-.header .header__switch-container input:checked ~ label::after {
-  left: 57%;
-  background: hsl(240deg, 78%, 98%);
-}
-
-.plan__container {
-  display: grid;
-  margin: 0 auto;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: repeat(3, minmax(250px, 320px));
-  gap: 1rem;
-  margin-top: 5rem;
-}
-.plan .plan__card {
-  border-radius: 0.5rem;
-  background: white;
-  padding: 2rem;
-  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.1);
-}
-.plan .plan__card:nth-child(2) {
-  background: linear-gradient(74deg, #a3a6f0 12%, #6b6bdb 80%);
-  color: white;
-  transform: scale(1.15);
-}
-.plan .plan__card .plan__title {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 700;
-  color: hsl(233deg, 13%, 49%);
-  padding: 1.2rem;
-}
-.plan .plan__card .plan__title--modify {
-  color: white;
-}
-.plan .plan__card .plan__value-wap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: hsl(233deg, 13%, 49%);
-  gap: 0.325rem;
-}
-.plan .plan__card .plan__value-wap .plan__simbol {
-  font-size: 1rem;
-}
-.plan .plan__card .plan__value-wap .plan__value {
-  font-size: 2rem;
-}
-.plan .plan__card .plan__value--modify {
-  color: white;
-}
-.plan .plan__card .plan__list {
-  margin-top: 1.5rem;
-}
-.plan .plan__card .plan__list .plan__item {
-  padding: 0.5rem 0;
-  text-align: center;
-  border-bottom: 1px solid hsl(234deg, 14%, 74%);
-}
-.plan .plan__card .plan__list .plan__item:first-child {
-  border-top: 1px solid hsl(234deg, 14%, 74%);
-}
-.plan .plan__card .btn__learn-more {
-  margin-top: 1rem;
-  background: transparent;
-  width: 100%;
-  padding: 0.325rem 0;
-  border-radius: 0.3rem;
-  border: 1px solid hsl(233deg, 13%, 49%);
-  color: hsl(233deg, 13%, 49%);
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 700;
-}
-.plan .plan__card .btn__learn-more--modify {
-  color: white;
-  border: 1px solid white;
-}
-
-.attribution {
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  text-align: center;
-}
-
 body {
   font-size: 15px;
   font-family: "Montserrat", sans-serif;

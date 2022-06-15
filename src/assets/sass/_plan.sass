@@ -1,92 +1,101 @@
 @use 'variables'
 
-
-.plan
-    // background: white
-
-    &__container
-        display: grid
-        margin: 0 auto
-        justify-content: center
-        width: 100%
-        height: 100%
-        grid-template-columns: repeat(3, minmax(250px, 320px))
-        gap: 1rem
-        margin-top: 5rem
-
-    .plan__card
-        border-radius: .5rem
-        background: white
-        padding: 2rem
-        box-shadow: 0px 6px 6px -3px rgba(0,0,0 , .1) 
-
-        &:nth-child(2)
-            background: variables.$linear-gradient
-            color: white
-            transform: scale(1.15)
-            
-        .plan__title
-            text-align: center
-            font-size: 1rem
-            font-weight: 700
-            color: variables.$terciary-color
-            padding: 1.2rem
-
-        .plan__title--modify
-            color: white
-
-        .plan__value-wap
-            display: flex
+@media (min-width: 375px)
+    .plan
+        // background: white
+        &__container
+            display: grid
+            margin: 0 auto
             justify-content: center
-            align-items: center
-            color: variables.$terciary-color
-            gap: .325rem
-
-            .plan__simbol
-                font-size: 1rem
-            
-            .plan__value
-                font-size: 2rem
-        
-        .plan__value--modify
-            color: white
-        
-        .plan__list
-            margin-top: 1.5rem
-
-            .plan__item
-                // margin-bottom: .2rem
-                padding: .5rem 0
-                text-align: center
-                border-bottom: 1px solid variables.$secundary-color
-            
-                &:first-child
-                    border-top: 1px solid variables.$secundary-color
-        
-        .btn__learn-more
-            margin-top: 1rem         
-            background: transparent
             width: 100%
-            padding: .325rem 0
-            border-radius: .3rem
-            border: 1px solid variables.$terciary-color
-            color: variables.$terciary-color
-            text-transform: uppercase
-            cursor: pointer
-            font-weight: 700
+            height: 100%
+            grid-template-columns: minmax(250px, 360px)
+            gap: 1.5rem
+            margin-top: 5rem
 
-        .btn__learn-more--modify
-            color: white
-            border: 1px solid white
-                
+        .plan__card
+            border-radius: .5rem
+            background: white
+            padding: 2rem
+            box-shadow: 0px 6px 6px -3px rgba(0,0,0 , .1)
+
+            &:nth-child(2)
+                background: variables.$linear-gradient
+                color: white
+
+            .plan__title
+                text-align: center
+                font-size: 1rem
+                font-weight: 700
+                color: variables.$terciary-color
+                padding: 1.2rem
+
+            .plan__title--modify
+                color: white
+
+            .plan__value-wap
+                display: flex
+                justify-content: center
+                align-items: center
+                color: variables.$terciary-color
+                gap: .325rem
+
+                .plan__simbol
+                    font-size: 1rem
+
+                .plan__value
+                    font-size: 2rem
+
+            .plan__value--modify
+                color: white
+
+            .plan__list
+                margin-top: 1.5rem
+
+                .plan__item
+                    padding: .5rem 0
+                    text-align: center
+                    border-bottom: 1px solid variables.$secundary-color
+
+                    &:first-child
+                        border-top: 1px solid variables.$secundary-color
+
+            .btn__learn-more
+                margin-top: 1rem
+                background: transparent
+                width: 100%
+                padding: .325rem 0
+                border-radius: .3rem
+                border: 1px solid variables.$terciary-color
+                color: variables.$terciary-color
+                text-transform: uppercase
+                cursor: pointer
+                font-weight: 700
+
+            .btn__learn-more--modify
+                color: white
+                border: 1px solid white
+
+@media (min-width: 960px)
+    .plan
+        // background: white
+        &__container
+            display: grid
+            margin: 0 auto
+            justify-content: center
+            width: 100%
+            height: 100%
+            grid-template-columns: repeat(3, minmax(250px, 320px))
+            gap: 1rem
+            margin-top: 5rem
     
-                    
-                    
-                    
+        .plan__card
+                border-radius: .5rem
+                background: white
+                padding: 2rem
+                box-shadow: 0px 6px 6px -3px rgba(0,0,0 , .1)
 
-
-
-
-            
-        
-
+                &:nth-child(2)
+                    background: variables.$linear-gradient
+                    color: white
+                    transform: scale(1.15)

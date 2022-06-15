@@ -1,7 +1,21 @@
 @use 'variables'
 
-.attribution
-    margin-top: 2rem
-    font-size: .8rem
-    text-align: center
-    
+@media (min-width: 375px)   
+    .attribution
+        font-size: .8rem
+        text-align: center
+        padding: 1.2rem
+
+        a
+            color: variables.$secundary-color
+            font-weight: 700
+
+            &:hover
+                color: variables.$terciary-color
+            
+
+@media (min-width: 960px)
+    .attribution
+        margin-top: 2rem 
+        font-size: 1rem
+        

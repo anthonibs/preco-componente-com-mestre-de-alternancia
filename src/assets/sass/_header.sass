@@ -1,29 +1,28 @@
 @use 'variables'
 
-
 .container
-    padding: 2rem
+    padding: 1rem
 
 // SWITCH
-.header
-    &__title
-        font-size: 2rem
-        color: variables.$terciary-color
-        text-align: center
-    
-    &__container
-        display: flex
-        justify-content: center
-        align-items: center
-        gap: 1.5rem
-        margin: 3rem 0
-
-        .header__subtitle-plan
+@media (min-width: 375px)
+    .header
+        &__title
+            font-size: 1.5rem
             color: variables.$terciary-color
+            text-align: center
 
+        &__container
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 1.5rem
+            margin: 2rem 0
 
-    .header__switch-container
-        width: 5rem
+            .header__subtitle-plan
+                color: variables.$terciary-color
+
+        .header__switch-container
+            width: 5rem
 
     .header__switch-container
         input
@@ -69,3 +68,14 @@
         input:checked ~ label::after
             left: 57%
             background: variables.$primary-color // Cor da bolinha
+
+@media (min-width: 960px)
+
+    // Fim mobile
+    .header
+        &__title
+            font-size: 2rem
+
+        &__container
+            gap: 1.5rem
+            margin: 3rem 0
